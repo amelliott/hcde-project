@@ -7,11 +7,11 @@
 			font-size: 1em;
 		}
 		#body {
-			margin: 0 auto;
-			width: 70%;
-			background-color: #f6f6f6;
 		}
 		#section {
+			width: 70%;
+			height: 80%;
+			background-color: #f6f6f6;
 			margin: 50px auto;
 			padding: 25px;
 			width: 60%;
@@ -21,6 +21,11 @@
 			font-weight: bold;
 			text-align: center;
 			padding: 10 10 10 10;
+		}
+		#section_content {
+			padding: 25px;
+			width: 70%;
+			margin: auto;
 		}
 		p {
 			padding-bottom: 20px;
@@ -83,6 +88,8 @@
 	    function changeToState(state) {
 	    	$("#section_title").text(state["title"]);
 	    	$("#section_content").html(state["content"]);
+	    	$("#next_button").text(states[state["next"]]["title"]);
+	    	$("#prev_button").text(states[state["prev"]]["title"]);
 	    	curState = state;
 	    }
 
@@ -95,7 +102,7 @@
 			});
 
 			$("a#prev_button").click( function() {
-				changeToPrevState();//function () {alert("go to success")})
+				changeToPreviousState();//function () {alert("go to success")})
 			});
 		});
 	</script>
