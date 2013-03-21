@@ -1,0 +1,113 @@
+<html>
+<head>
+	<title>HCDE 517 Final Reflection</title>
+	<style type="text/css">
+		body {
+			font-family: Helvetica, Arial, sans-serif;
+			font-size: 1em;
+		}
+		#body {
+			margin: 0 auto;
+			width: 70%;
+			background-color: #f6f6f6;
+		}
+		#section {
+			margin: 50px auto;
+			padding: 25px;
+			width: 60%;
+		}
+		#section_title {
+			font-size: 2em;
+			font-weight: bold;
+			text-align: center;
+			padding: 10 10 10 10;
+		}
+		p {
+			padding-bottom: 20px;
+		}
+		button .centered{
+			position: absolute;
+			width: 200px;
+			/*Centering Method 2*/
+			margin: 0px 0 0 -100px;
+			left: 50%;
+		}
+		a.next {
+			float: right;
+		}
+		a.prev {
+			float: left;
+			color: red;
+		}
+		a {
+			text-decoration: none;
+			font-size: 1.1em
+			color: red;
+		}
+
+	</style>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script>
+		var states = {
+			"learning": {
+				"title": "What did I learn?",
+				"next": "success",
+				"prev": "contribution",
+				"content": "<p>In this class I learned that there are a lot more usability testing methods than I thought. Even deciding what you want to test and then figuring out how to test it can require more work than I expected. I enjoyed learning about a range of testing techniques that can fit into any situation needed. Readings I found particularly useful were about being flexible in your testing plan and recruiting. Basically, <em>any</em> testing is better than <em>no</em> testing.<br /><br />			I am already starting to apply what I have learned in this class at my day job. Traditionally at my company, nearly all user testing has been performed using prerelease users. With my current project, I am working with our team's designer to design and run tests with users one on one. We have been recruiting and performed a couple testing sessions so far. It has really shown rest of the team how valuable this type of testing can be.</p>"
+			},
+			"success": {
+				"title": "Was our project a success?",
+				"next": "contribution",
+				"prev": "learning",
+				"content": "Success content"
+			},
+			"contribution": {
+				"title": "What did I contribute?",
+				"next": "learning",
+				"prev": "success",
+				"content": "Contribution content"
+			}
+		}
+		var curState = null;
+
+	    function changeToNextState() {
+	    	//var prevState = curState;
+	    	changeToState(states[curState["next"]]);
+	    }
+	    
+	    function changeToPreviousState() {
+	    	changeToState(states[curState["prev"]]);
+
+	    }
+
+	    function changeToState(state) {
+	    	$("#section_title").text(state["title"]);
+	    	$("#section_content").html(state["content"]);
+	    	curState = state;
+	    }
+
+		//alert('here')
+		$(document).ready(function(){
+			changeToState(states["learning"]);
+
+			$("#next_button").click( function() {
+				changeToNextState();//function () {alert("go to success")})
+			});
+
+			$("a#prev_button").click( function() {
+				changeToPrevState();//function () {alert("go to success")})
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="body">
+		<div id="section">
+			<div id="section_title"></div>
+			<div id="section_content"></div>
+		</div>
+		<a href="#" id="prev_button" class="prev">&lt; What did I contribute to our project?</button>
+		<a href="#" id="next_button" class="next">Was our project a success? &gt;</button>
+	</div>
+</body>
+</html>
