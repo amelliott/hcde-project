@@ -5,31 +5,38 @@
 		body {
 			font-family: Helvetica, Arial, sans-serif;
 			font-size: 1em;
+			background-color: #333;
+			line-height: 1.4em;
+			font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, "Lucida Grande", sans-serif;
 		}
-		#body {
-		}
+
 		#section {
 			width: 70%;
-			height: 80%;
-			background-color: #f6f6f6;
+			height: 75%;
+			color: #ddd;
 			margin: 50px auto;
 			padding: 25px;
 			width: 60%;
 		}
+
 		#section_title {
+			color: #fff;
 			font-size: 2em;
-			font-weight: bold;
 			text-align: center;
 			padding: 10 10 10 10;
+			font-weight: 100;
 		}
+
 		#section_content {
 			padding: 25px;
 			width: 70%;
 			margin: auto;
 		}
+
 		p {
 			padding-bottom: 20px;
 		}
+
 		button .centered{
 			position: absolute;
 			width: 200px;
@@ -37,17 +44,21 @@
 			margin: 0px 0 0 -100px;
 			left: 50%;
 		}
+
 		a.next {
 			float: right;
 		}
+
 		a.prev {
 			float: left;
-			color: red;
 		}
+
 		a {
 			text-decoration: none;
-			font-size: 1.1em
-			color: red;
+			font-size: 1.1em;
+			color: #fff;
+			padding: 0;
+			margin: 0;
 		}
 
 	</style>
@@ -58,13 +69,13 @@
 				"title": "What did I learn?",
 				"next": "success",
 				"prev": "contribution",
-				"content": "<p>In this class I learned that there are a lot more usability testing methods than I thought. Even deciding what you want to test and then figuring out how to test it can require more work than I expected. I enjoyed learning about a range of testing techniques that can fit into any situation needed. Readings I found particularly useful were about being flexible in your testing plan and recruiting. Basically, <em>any</em> testing is better than <em>no</em> testing.<br /><br />			I am already starting to apply what I have learned in this class at my day job. Traditionally at my company, nearly all user testing has been performed using prerelease users. With my current project, I am working with our team's designer to design and run tests with users one on one. We have been recruiting and performed a couple testing sessions so far. It has really shown rest of the team how valuable this type of testing can be.</p>"
+				"content": "<p>In this class I learned that there are a lot more usability testing methods than I thought. Even deciding what you want to test and then figuring out how to test it can require more work than I expected. I enjoyed learning about a range of testing techniques that can fit into any situation needed. Readings I found particularly useful were about being flexible in your <a href=\"https://dl.dropbox.com/u/17697907/HCDE/HCDE517/Readings/dray_penny_wise_pound_wise.pdf\">testing plan</a> and recruiting, even for <a href=\"https://dl.dropbox.com/u/17697907/HCDE/HCDE517/Readings/krug_10_cents_a_day.pdf\">cheap</a>. Basically, <em>any</em> testing is better than <em>no</em> testing.<br /><br />			I am already starting to apply what I have learned in this class at my day job. Traditionally at my company, nearly all user testing has been performed using prerelease users. With my current project, I am working with our team's designer to design and run tests with users one on one. We have been recruiting and performed a couple testing sessions so far. It has really shown rest of the team how valuable this type of testing can be.</p>"
 			},
 			"success": {
 				"title": "Was our project a success?",
 				"next": "contribution",
 				"prev": "learning",
-				"content": "Success content"
+				"content": "<p>For our group project, we worked with <a href=“http://squarehub.com”>Squarehub</a> to evaluate their new iPhone application. They wanted to verify that users would not have problems with the registration process. Since they had a couple different versions with workflow variations, we decided to run a comparison test between the two. We also decided to test the calendar event system after determining it was important but not very useful in its implementation.</p>"
 			},
 			"contribution": {
 				"title": "What did I contribute?",
