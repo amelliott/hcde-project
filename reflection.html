@@ -123,8 +123,8 @@
 	    function changeToState(state) {
 	    	$("#section_title").text(state["title"]);
 	    	$("#section_content").html(state["content"]);
-	    	$("#next_button").html(states[state["next"]]["title"] + " <span style=\"color:#777;\">&gt;</span>");
-	    	$("#prev_button").html("<span style=\"color:#777;\">&lt;</span> " + states[state["prev"]]["title"]);
+	    	$("#next_button").html(states[state["next"]]["title"] + " <span style=\"color:#666;\">&gt;</span>");
+	    	$("#prev_button").html("<span style=\"color:#666;\">&lt;</span> " + states[state["prev"]]["title"]);
 	    	curState = state;
 	    }
 
