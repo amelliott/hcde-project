@@ -46,11 +46,17 @@
 		}
 
 		a.next {
-			float: right;
+			padding: 20;
+			position: absolute;
+			bottom: 0;
+			right: 0;
 		}
 
 		a.prev {
-			float: left;
+			padding: 20;
+			position: absolute;
+			bottom: 0;
+			left: 0;
 		}
 
 		a {
@@ -61,6 +67,23 @@
 			margin: 0;
 		}
 
+		#header {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			color: #666;
+		}
+		#header_name {
+			padding: 10;
+			position: absolute;
+			left: 0;
+		}
+		#header_class {
+			padding: 10;
+			position: absolute;
+			right: 10px;
+		}
+
 	</style>
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script>
@@ -69,7 +92,7 @@
 				"title": "What did I learn?",
 				"next": "success",
 				"prev": "contribution",
-				"content": "<p>In this class I learned that there are a lot more usability testing methods than I thought. Even deciding what you want to test and then figuring out how to test it can require more work than I expected. I enjoyed learning about a range of testing techniques that can fit into any situation needed. Readings I found particularly useful were about being flexible in your <a href=\"https://dl.dropbox.com/u/17697907/HCDE/HCDE517/Readings/dray_penny_wise_pound_wise.pdf\">testing plan</a> and recruiting, even for <a href=\"https://dl.dropbox.com/u/17697907/HCDE/HCDE517/Readings/krug_10_cents_a_day.pdf\">cheap</a>. Basically, <em>any</em> testing is better than <em>no</em> testing.<br /><br />			I am already starting to apply what I have learned in this class at my day job. Traditionally at my company, nearly all user testing has been performed using prerelease users. With my current project, I am working with our team's designer to design and run tests with users one on one. We have been recruiting and performed a couple testing sessions so far. It has really shown rest of the team how valuable this type of testing can be.</p>"
+				"content": "<p>In this class I learned that there are a lot more usability testing methods than I thought. Even deciding what you want to test and then figuring out how to test it can require more work than I expected. I enjoyed learning about a range of testing techniques that can fit into any situation needed. Readings I found particularly useful were about being flexible in your <a href=\"https://dl.dropbox.com/u/17697907/HCDE/HCDE517/Readings/dray_penny_wise_pound_wise.pdf\">testing plan and recruiting</a>, even for <a href=\"https://dl.dropbox.com/u/17697907/HCDE/HCDE517/Readings/krug_10_cents_a_day.pdf\">cheap</a>. Basically, <em>any</em> testing is better than <em>no</em> testing.<br /><br />			I am already starting to apply what I have learned in this class at my day job. Traditionally at my company, nearly all user testing has been performed using prerelease users. With my current project, I am working with our team's designer to design and run tests with users one on one. We have been recruiting and performed a couple testing sessions so far. It has really shown rest of the team how valuable this type of testing can be.</p>"
 			},
 			"success": {
 				"title": "Was our project a success?",
@@ -119,6 +142,8 @@
 	</script>
 </head>
 <body>
+	<div id="header"><span id="header_name">Andrew Elliott</span><span id="header_class">HCDE 517</span></div>
+	</div>
 	<div id="body">
 		<div id="section">
 			<div id="section_title"></div>
